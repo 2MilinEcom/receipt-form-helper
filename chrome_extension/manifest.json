@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Amex Clothing Helper",
+  "version": "1.0.0",
+  "description": "Read receipt screenshots locally with your Python helper and fill clothing in your logged-in claims tab.",
+  "permissions": ["scripting", "storage"],
+  "host_permissions": ["https://claims-center.americanexpress.com/*", "http://127.0.0.1:18765/*"],
+  "action": {"default_title": "Open clothing helper"},
+  "background": {"service_worker": "background.js"}
+}

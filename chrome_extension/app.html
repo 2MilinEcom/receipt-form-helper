@@ -1,0 +1,24 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Amex clothing helper</title>
+<link rel="stylesheet" href="app.css">
+<main>
+<h1>Add claim items in your normal Chrome</h1>
+<p>Keep <code>python local_server.py</code> running. Log in to Amex in your usual Chrome tab.</p>
+<div id="zone" tabindex="0" role="button">Drop receipt screenshots here<br><small>Or click to browse • PNG, JPG, WebP</small></div>
+<input id="files" type="file" accept="image/png,image/jpeg,image/webp" multiple hidden>
+<div id="previews"></div>
+<button id="read" disabled>Read screenshots</button> <button id="forget">Forget saved screenshots and review</button>
+<p>Screenshots and your edited review are saved on this Mac and restored when you reopen this helper. Read screenshots sends them to OpenAI; restoring the saved review does not.</p>
+<p id="status"></p>
+<section id="review" hidden>
+<h2>Review all items together</h2>
+<p>When item tax is unverified, amounts exclude tax. Check dates, amounts, brands, Amex payment, and stolen items before filling.</p>
+<div class="scroll"><table><thead><tr><th>Include</th><th>Item</th><th>Purchase date</th><th>Brand</th><th>Amount to claim</th><th>Category</th><th>Merchant</th><th>Evidence</th></tr></thead><tbody id="rows"></tbody></table></div>
+<p>New products are unchecked until you select them. Keep your Amex tab on Item Information. Existing entries are checked before adding more.</p>
+<label>Claims tab <select id="target"></select></label> <button id="refresh">Refresh tabs</button>
+<p><button id="fill">Fill and save included items in that tab</button></p>
+<p>Final claim submission remains yours. Stop immediately if Amex shows validation errors.</p>
+</section>
+</main>
+<script src="app.js"></script>
