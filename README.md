@@ -1,16 +1,11 @@
 # Receipt Form Helper
 
-Browser extension and local Python service for extracting receipt details and preparing forms for review.
+I built this helper to turn receipt screenshots into details I can review before filling a form. I kept the browser extension separate from the local Python service so account access stays in my normal browser.
 
-## Technology
+I used JavaScript for the extension and Python for image processing and extraction. I can correct the extracted details before filling a form, and the helper leaves final submission to me.
 
-JavaScript, Python, Chrome Extensions.
+## Running it
 
-## Run locally
+I install `requirements.txt` in a Python environment, configure my own settings from `.env.example`, and run `python local_server.py`. I load `chrome_extension/` as an unpacked extension in Chrome.
 
-Create a Python virtual environment and install `requirements.txt`. Copy `.env.example` to your local `.env` and configure your own optional services. Run `python local_server.py`, then load `chrome_extension/` as an unpacked extension in Chrome. Use fictional receipts when evaluating the project and review form entries before any submission.
-
-## Portfolio snapshot
-
-This repository contains a source snapshot of a personal project. Personal records, credentials, browser sessions, local databases, and generated output are excluded. Use your own configuration and fictional data when evaluating it. Some integrations require external accounts or additional setup. This is a development project, with feature limitations documented in the source and guides.
-
+I use fictional receipt images when demonstrating the project. I keep credentials and saved receipt records outside version control. I kept the detailed local workflow in `README.txt`.
